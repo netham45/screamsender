@@ -11,14 +11,20 @@ This does not currently support any channel layout other than stereo.
 * `-s <Sample Rate>` Sample Rate, Default 48000
 * `-b <Bit Depth>` Bit Depth, Default 32
 
-## To build
-`g++ screamsender.cpp -o screamsender`
+## Building
 
-### To cross-compile for aarch64
+### Local build
+
+Tested using Debian 12 and Alma 9 containers
+
+* Install the following packages: `g++` `gcc`
+* Compile with `g++ screamsender.cpp -o screamsender`
+
+### Cross-compile for aarch64
 
 Tested using a Debian 12 container
 
-* Install the following packages: `gcc` `make g++-aarch64-linux-gnu` `gcc-aarch64-linux-gnu` `binutils-aarch64-linux-gnu`
+* Install the following packages: `g++-aarch64-linux-gnu` `gcc-aarch64-linux-gnu` `binutils-aarch64-linux-gnu`
 * Compile with `aarch64-linux-gnu-g++ --static screamsender.cpp -o screamsender_aarch64`
 
 ## To export a stereo audio stream from an LG WebOS TV
