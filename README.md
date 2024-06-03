@@ -6,7 +6,7 @@ This does not currently support any channel layout other than stereo.
 
 ## Usage
 
-* `-i <IP Address>` IP address to send stream to, Mandatory
+* `-i <IP Address>` IP Address to send stream to, Mandatory
 * `-p <Port>` Port to send stream to, Mandatory
 * `-s <Sample Rate>` Sample Rate, Default 48000
 * `-b <Bit Depth>` Bit Depth, Default 32
