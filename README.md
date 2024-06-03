@@ -1,15 +1,15 @@
 # ScreamSender
 
-This is a utility originally intended to run on LG WebOS TVs, however it should run on any Linux host. This utility takes in PCM from stdin and sends it out to the specified Scream receiver or [ScreamRouter](http://github.com/netham45/ScreamRouter)
+This is a utility originally intended to run on LG WebOS TVs, however it should run anywhere Linux is available. This utility takes in PCM from stdin and sends it out to the specified Scream receiver or [ScreamRouter](http://github.com/netham45/ScreamRouter)
 
 This does not currently support any channel layout other than stereo.
 
 ## Usage
 
-* -i <IP Address> Mandatory, IP address to send stream to
-* -p <Port> Mandatory, port to send stream to
-* -s <Sample Rate> Default 48000
-* -b <Bit Depth> Default 32
+* `-i <IP Address>` IP address to send stream to, mandatory
+* `-p <Port>` Port to send stream to, mandatory
+* `-s <Sample Rate>` Sample Rate, Default 48000
+* `-b <Bit Depth>` Bit Depth, Default 32
 
 ## To build
 `g++ screamsender.cpp -o screamsender`
