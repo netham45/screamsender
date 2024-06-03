@@ -27,13 +27,13 @@ Tested using a Debian 12 container
 * Install the following packages: `g++-aarch64-linux-gnu` `gcc-aarch64-linux-gnu` `binutils-aarch64-linux-gnu`
 * Compile with `aarch64-linux-gnu-g++ --static screamsender.cpp -o screamsender_aarch64`
 
-## To export a stereo audio stream from an LG WebOS TV
+## Sending audio from an LG WebOS TV
 
 Tested on an LG C1
 
 `arecord -B 0 -D "hw:1,2" -f S32_LE -c 2 -r 48000 - | screamsender -i <IP Address> -p <Port>`
 
-Note: Reading from some inputs with arecord with high channel counts set will crash and reboot the TV.
+Note: Reading from some inputs with arecord with high channel counts set will crash and reboot the TV. I only located stereo sources.
 
 ### Capturing audio from HDMI
 
