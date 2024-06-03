@@ -21,7 +21,7 @@ Tested using a Debian 12 container
 * Install the following packages: `gcc` `make g++-aarch64-linux-gnu` `gcc-aarch64-linux-gnu` `binutils-aarch64-linux-gnu`
 * Compile with `aarch64-linux-gnu-g++ --static screamsender.cpp -o screamsender_aarch64`
 
-## To export a stereo audio stream from a LG WebOS TV
+## To export a stereo audio stream from an LG WebOS TV
 
 Tested on an LG C1
 
