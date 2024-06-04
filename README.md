@@ -38,4 +38,3 @@ Note: Reading from some inputs with arecord with high channel counts set will cr
 ### Capturing audio from HDMI
 
 To capture audio from HDMI you need to have the audio going through the TV -- Playing from either TV, Wired Headphones, or Bluetooth, not ARC/eARC. Optical is untested. Only stereo is available from the TV.
-
