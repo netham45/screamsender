@@ -14,6 +14,8 @@
 #define PACKET_HEADER_SIZE 5
 #define PACKET_SIZE (PACKET_DATA_SIZE + PACKET_HEADER_SIZE)
 
+int zeroes = 0;
+
 int main(int argc, char *argv[])  {
 
     int opt; 
@@ -112,6 +114,22 @@ int main(int argc, char *argv[])  {
             retval = 4;
             continue;
         }
+        bool continueWhile = false;
+        for (int i=PACKET_HEADER_SIZE;i<PACKET_DATA_SIZE;i++) {
+            if (buffer_pending[buffer_pending_bytes + i] == 0) {
+                zeroes++;
+                if (zeroes >= 1152*4) {
+                    continueWhile = true;
+                }
+            }
+            else {
+                zeroes = 0;
+                continueWhile = false;
+                break;
+            }
+        }
+        if (continueWhile)
+            continue;
         buffer_pending_bytes = buffer_pending_bytes + bytes_read;
         // If there's >= PACKET_DATA_SIZE bytes then send PACKET_DATA_SIZE bytes
         if (buffer_pending_bytes >= PACKET_DATA_SIZE)
